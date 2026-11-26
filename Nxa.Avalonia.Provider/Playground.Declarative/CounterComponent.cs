@@ -5,25 +5,25 @@ namespace Playground.Declarative;
 
 public partial class CounterComponent(SampleDataService dataService) : ViewBase<CounterComponent.State>(new State(dataService))
 {
-    protected override StyleGroup? BuildStyles() =>
-    [
-        new Style<Button>(x => x.Class(":pointerover").Descendant())
-            .Background(Brushes.LightBlue),
+    // protected override StyleGroup? BuildStyles() =>
+    // [
+    //     new Style<Button>(x => x.Class(":pointerover").Descendant())
+    //         .Background(Brushes.LightBlue),
 
-        new Style<Button>()
-            .Margin(6)
-            .Background(Brushes.DarkSalmon),
+    //     new Style<Button>()
+    //         .Margin(6)
+    //         .Background(Brushes.DarkSalmon),
 
-        new Style<TextBlock>(s => s.OfType<StackPanel>().Name("SideBar").Descendant())
-            .FontSize(16)
-            .Foreground(Brushes.White),
+    //     new Style<TextBlock>(s => s.OfType<StackPanel>().Name("SideBar").Descendant())
+    //         .FontSize(16)
+    //         .Foreground(Brushes.White),
 
-        new StyleGroup(x => x.Class("narrow").Descendant())
-        {
-            new Style<StackPanel>(s => s.Name("SideBar"))
-                .IsVisible(false)
-        }
-    ];
+    //     new StyleGroup(x => x.Class("narrow").Descendant())
+    //     {
+    //         new Style<StackPanel>(s => s.Name("SideBar"))
+    //             .IsVisible(false)
+    //     }
+    // ];
 
     protected override object Build(State state) =>
         new Grid().Cols("150, *")

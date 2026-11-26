@@ -6,6 +6,6 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 <ItemGroup>
-    <PackageReference Include="Avalonia" Version="12.2.0" />
+    <PackageReference Include="Avalonia" />
 </ItemGroup>
 </Project>

@@ -2,9 +2,17 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             xmlns:local="using:Playground.Xaml"
+             xmlns:sys="using:System"
+             mc:Ignorable="d"
              x:Class="Playground.Xaml.MyNestedControl">
-    <UserControl.Content>
-      <TextBox x:Name="Text"></TextBox>
-    </UserControl.Content>
+
+    <UserControl.DataContext>
+        <Binding Path="ViewModel" RelativeSource="{RelativeSource Self}" />
+    </UserControl.DataContext>
+
+    <StackPanel>
+        <TextBox Text="{Binding FactoryValue, Mode=OneWay}" />
+        <Button Click="OnClick" Content="Factory Value" />
+    </StackPanel>
 </UserControl>

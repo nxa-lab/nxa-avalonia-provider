@@ -5,6 +5,7 @@ namespace Nxa.Avalonia.Provider;
 
 public static class ControlExtensions
 {
+    
     public static T? FetchProvidedValue<T>(this Control control)
     {
         var parent = control.GetLogicalParent();

@@ -7,7 +7,14 @@ namespace Playground.Xaml;
 
 public class MyStateObject
 {
+    private static int factoryValue;
+
     public int Value { get; set; }
+    public int FactoryValue { get => factoryValue; set => factoryValue = value; }
+    public MyStateObject()
+    {
+        factoryValue++;
+    }
 }
 public partial class MyContentPage : ContentPage
 {
@@ -16,5 +23,6 @@ public partial class MyContentPage : ContentPage
         InitializeComponent();
         var provider = this.FindControl<ProviderHost>("Provider");
         provider.RegisterValue(new MyStateObject() { Value = 2 });
+        provider.RegisterFactory(()=>new MyStateObject());
     }
 }

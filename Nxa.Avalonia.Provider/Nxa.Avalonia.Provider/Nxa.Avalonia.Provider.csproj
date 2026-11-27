@@ -4,8 +4,37 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+
+    <PackageId>Nxa.Avalonia.Provider</PackageId>
+    <Version>0.1.0</Version>
+    <Authors>Nxa Lab</Authors>
+    <Company>Nxa Lab</Company>
+    <Product>Nxa.Avalonia.Provider</Product>
+
+    <Description>Dependency injection and state management utilities for Avalonia UI, including Provider and BLoC implementations.</Description>
+
+    <PackageTags>avalonia;dependency-injection;provider;bloc;mvvm</PackageTags>
+
+    <PackageProjectUrl>https://github.com/nxa-lab/nxa-avalonia-provider</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/nxa-lab/nxa-avalonia-provider</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+
+    <PackageReleaseNotes>Initial release of Nxa.Avalonia.Provider.</PackageReleaseNotes>
+
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
   </PropertyGroup>
-<ItemGroup>
+  <ItemGroup>
+      <None Include="../../README.md"
+            Pack="true"
+            PackagePath="/" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Avalonia" />
-</ItemGroup>
+  </ItemGroup>
+
 </Project>

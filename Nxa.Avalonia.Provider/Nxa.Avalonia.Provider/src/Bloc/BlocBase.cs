@@ -4,7 +4,7 @@ public abstract class BlocBase<Tstate, Tevent>
     where Tstate : notnull
     where Tevent : notnull
 {
-    public event Action<Tstate> StateChanged;
+    public event Action<Tstate>? StateChanged;
     public Tstate State { get; protected set; }
     public BlocBase(Tstate initialState)
     {
@@ -23,7 +23,7 @@ public abstract class BlocBase<Tstate, Tevent>
     protected void Emit(Tstate newState)
     {
         State = newState;
-        StateChanged.Invoke(State);
+        StateChanged?.Invoke(State);
     }
     private Dictionary<Type, Func<Tevent, Task>> _handlers = new();
 }

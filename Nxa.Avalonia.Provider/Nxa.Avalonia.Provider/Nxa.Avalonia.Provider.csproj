@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
 
     <PackageId>Nxa.Avalonia.Provider</PackageId>
-    <Version>0.1.0</Version>
+    <Version>0.1.1</Version>
     <Authors>Nxa Lab</Authors>
     <Company>Nxa Lab</Company>
     <Product>Nxa.Avalonia.Provider</Product>
@@ -19,7 +19,7 @@
     <RepositoryUrl>https://github.com/nxa-lab/nxa-avalonia-provider</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
 
-    <PackageReleaseNotes>Initial release of Nxa.Avalonia.Provider.</PackageReleaseNotes>
+    <PackageReleaseNotes>Updated Avalonia dependency compatibility to version 12.0.0.</PackageReleaseNotes>
 
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageReadmeFile>README.md</PackageReadmeFile>
